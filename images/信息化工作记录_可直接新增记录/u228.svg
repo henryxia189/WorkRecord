@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="91px" height="85px" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask fill="white" id="clip98">
+      <path d="M 113 171  C 94.13 171  79 155.87  79 137  L 79 130  C 79 111.13  94.13 96  113 96  L 126 96  C 144.87 96  160 111.13  160 130  L 160 137  C 160 155.87  144.87 171  126 171  " fill-rule="evenodd" />
+    </mask>
+    <filter x="74px" y="91px" width="91px" height="85px" filterUnits="userSpaceOnUse" id="filter99">
+      <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetInner" />
+      <feGaussianBlur stdDeviation="2.5" in="shadowOffsetInner" result="shadowGaussian" />
+      <feComposite in2="shadowGaussian" operator="atop" in="SourceAlpha" result="shadowComposite" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.349019607843137 0  " in="shadowComposite" />
+    </filter>
+    <g id="widget100">
+      <path d="M 79 96  L 160 96  L 160 171  L 79 171  L 79 96  " fill-rule="nonzero" fill="#cccccc" stroke="none" mask="url(#clip98)" />
+      <path d="M 84 101  L 155 101  L 155 166  L 84 166  L 84 101  " fill-rule="nonzero" fill="#ffffff" stroke="none" mask="url(#clip98)" />
+      <path d="M 126.745 118.5  C 123.595 118.5  121.12 116.025  121.12 112.875  C 121.12 109.725  123.595 107.25  126.745 107.25  C 129.895 107.25  132.37 109.725  132.37 112.875  C 132.37 116.025  129.895 118.5  126.745 118.5  " fill-rule="nonzero" fill="#cccccc" stroke="none" mask="url(#clip98)" />
+      <path d="M 86 164  L 86 130.45  L 102.75 115.2  L 126.2 130.111111111111  L 139.6 124.35  L 153 130.111111111111  L 153 164  L 86 164  " fill-rule="nonzero" fill="#169bd5" stroke="none" mask="url(#clip98)" />
+    </g>
+  </defs>
+  <g transform="matrix(1 0 0 1 -74 -91 )">
+    <use xlink:href="#widget100" filter="url(#filter99)" />
+    <use xlink:href="#widget100" />
+  </g>
+</svg>

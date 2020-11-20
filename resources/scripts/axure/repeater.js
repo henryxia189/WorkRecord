@@ -2159,17 +2159,12 @@ $axure.internal(function($ax) {
             }
         }
 
-        var scrollParentObj = parent ? $('#' + parent) : undefined;
-        var parentScrollLeft = parent ? scrollParentObj.scrollLeft() : 0;
-        var parentScrollTop = parent ? scrollParentObj.scrollTop() : 0;
-
         // Note: If parent is body, some of these aren't widgets
         if(parent && $jobj(parent + '_content').length > 0) parent = parent + '_content';
-        if(parent && $jobj(parent + '_container').length > 0) parent = parent + '_container';
+        if (parent && $jobj(parent + '_container').length > 0) parent = parent + '_container';
 
-        var windowObj = $(window);
-        var scrollLeft = windowObj.scrollLeft();
-        var scrollTop = windowObj.scrollTop();
+        var scrollLeft = $(window).scrollLeft();
+        var scrollTop = $(window).scrollTop();
         var parentObj = $(parent ? '#' + parent : '#base');
         // hide parent to prevent layout thrashing 
         parentObj.hide();
@@ -2178,10 +2173,8 @@ $axure.internal(function($ax) {
 
         parentObj.show();
         // restore scroll if hide/show parent caused it to change
-        if(0 != parentScrollLeft) scrollParentObj.scrollLeft(parentScrollLeft);
-        if(0 != parentScrollTop) scrollParentObj.scrollTop(parentScrollTop);
-        if(windowObj.scrollLeft() != scrollLeft) windowObj.scrollLeft(scrollLeft);
-        if(windowObj.scrollTop() != scrollTop) windowObj.scrollTop(scrollTop);
+        if($(window).scrollLeft() != scrollLeft) $(window).scrollLeft(scrollLeft);
+        if($(window).scrollTop() != scrollTop) $(window).scrollTop(scrollTop);
 
         if(layer) $ax.visibility.popContainer(layer, false);
 
